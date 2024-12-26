@@ -27,8 +27,7 @@ int menu(){
 	cout << "8.) Least Common Multiplier" << endl;//9 
 	cout << "9.) Greatest Common Divisor" << endl;//10 done
 	cout << "10.) Modulus (only positive numbers)" << endl;//11 
-	cout << "11.) Display Function Execution" << endl; // 12 
-	cout << "12.) Quit" << endl; //
+	cout << "11.) Quit" << endl; //
 	cout << "----------------------------------------------------------------------" << endl << endl;
 	cout << "Please Select an operation: ";
 	cin >> choice;
@@ -38,7 +37,7 @@ int menu(){
 		cout << "Invalid input!!!! Please enter an integer value..." << endl;
 		cin >> choice;
 	}
-	if (choice > 0 && choice <= 12) {
+	if (choice > 0 && choice <= 11) {
 		return choice;
 	}
 	else
@@ -198,28 +197,28 @@ int main() {
 			cin >> amount;
 			ComputeAdd(amount);
 			v = Quit();
-			v ? choice = menu() : choice = 12;
+			v ? choice = menu() : choice = 11;
 		}
 		else if (choice == 2){
 			cout << "You choose Subtraction\nHow many numbers would you like to subtract: ";
 			cin >> amount;
 			ComputeSub(amount);
 			v = Quit();
-			v ? choice = menu() : choice = 12;
+			v ? choice = menu() : choice = 11;
 		}
 		else if (choice == 3) {
 			cout << "You choose Multiplication\nHow many numbers would you like to multiply: ";
 			cin >> amount;
 			ComputeMultiply(amount);
 			v = Quit();
-			v ? choice = menu() : choice = 12;
+			v ? choice = menu() : choice = 11;
 		}
 		else if (choice == 4) {
 			cout << "You choose Division\nHow many numbers would you like to Divide: ";
 			cin >> amount;
 			ComputeDiv(amount);
 			v = Quit();
-			v ? choice = menu() : choice = 12;
+			v ? choice = menu() : choice = 11;
 		}
 		else if (choice == 5) {
 			
@@ -230,7 +229,7 @@ int main() {
 			cin >> num2;
 			ComputeRoots(num1, num2);
 			v = Quit();
-			v ? choice = menu() : choice = 12;
+			v ? choice = menu() : choice = 11;
 		}
 		else if (choice == 6) {
 			cout << "You choose the Power option, it accepts real numbers for the base and int values for the power value" << endl;
@@ -241,19 +240,19 @@ int main() {
 			PowerTotal = ComputePower(num1, num2);
 			cout << "Total: " << PowerTotal << endl;
 			v = Quit();
-			v ? choice = menu() : choice = 12;
+			v ? choice = menu() : choice = 11;
 		}
 		else if (choice == 7) {
 			cout << "You chose Percentage" << endl;
 			ComputePercent();
 			v = Quit();
-			v ? choice = menu() : choice = 12;
+			v ? choice = menu() : choice = 11;
 		}
 		else if (choice == 8) {
 			cout << "You chose LCM" << endl;
 			ComputeLCM();
 			v = Quit();
-			v ? choice = menu() : choice = 12;
+			v ? choice = menu() : choice = 11;
 		}
 		else if (choice == 9) {
 			cout << "You chose GCD" << endl;
@@ -264,16 +263,16 @@ int main() {
 			GCD = ComputeGCD(num2, num3);
 			cout << "The GCM of " << num2 << " and " << num3 << " is equal to " << GCD << endl;
 			v = Quit();
-			v ? choice = menu() : choice = 12;
+			v ? choice = menu() : choice = 11;
 		}
 		else if (choice == 10) {
 			cout << "You chose modulo" << endl;
 			
 			ComputeModulo();
 			v = Quit();
-			v ? choice = menu() : choice = 12;
+			v ? choice = menu() : choice = 11;
 		}
-	} while (choice != 12);
+	} while (choice != 11);
 
 	ExitMes();
 	return 0;
